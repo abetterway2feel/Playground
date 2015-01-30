@@ -1,0 +1,59 @@
+    <html>
+        <head>
+            <title>Line Chart</title>
+            <script src="../js/Chart.min.js"></script>
+            <script src="../js/jquery.js" ></script>
+            
+            <meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
+            <style>
+                canvas{
+                }
+                div{
+                    font-family: Arial;
+                    font-size: 12px;
+                    min-height: 20px;
+                    width:50px;
+                    border:1px solid red;
+                    overflow:hidden;
+                    white-space: nowrap;
+                }
+            </style>
+        </head>
+        <body>
+            <table class="table">
+                <tr class="headers">
+                    <td>January</td>
+                    <td>February</td>
+                    <td>March</td>
+                    <td>April</td>
+                    <td>May</td>
+                    <td>June</td>
+                    <td>July</td>
+                <tr>
+                <tr class="data1">
+                    <td><div contenteditable>65</div></td>
+                    <td><div contenteditable>59</div></td>
+                    <td><div contenteditable>90</div></td>
+                    <td><div contenteditable>81</div></td>
+                    <td><div contenteditable>56</div></td>
+                    <td><div contenteditable>55</div></td>
+                    <td><div contenteditable>40</div></td>
+                </tr>
+                <tr class="data2">
+                    <td><div contenteditable>28</div></td>
+                    <td><div contenteditable>48</div></td>
+                    <td><div contenteditable>49</div></td>
+                    <td><div contenteditable>19</div></td>
+                    <td><div contenteditable>96</div></td>
+                    <td><div contenteditable>27</div></td>
+                    <td><div contenteditable>73</div></td>
+                </tr>
+            </table>
+            
+            <button id="btn">Update</button>
+            <br>
+            <canvas id="canvas" height="600" width="600"></canvas>
+            <script src="../js/chartbuilder.js" ></script>
+
+        </body>
+    </html>

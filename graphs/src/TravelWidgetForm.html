@@ -1,0 +1,33 @@
+<div style="display:none">
+    <img src="http://rtm.ebaystatic.com/3/RTMS/Image/spacer1x1.gif" onload="
+        var $ = document; 
+
+        var link  = $.createElement('link');
+        link.rel  = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'http://rtm.ebaystatic.com/77/Rtm/Css/19885_DE_REISEN_CSS';
+        link.media = 'all';
+
+        var script  = $.createElement('script');
+        script.src = 'https://securertm.ebaystatic.com/77/Rtm/Javascript/19885_DE_REISEN_JAVASCRIPT';
+        var head  = $.getElementsByTagName('head')[0];
+        head.appendChild(link);   
+        head.appendChild(script);
+    ">
+</div>
+<div class="travelbanner">
+    <form  action="http://www.ebay.de/sch/Kurzreisen-/34514/i.html" method="get" accept-charset="ISO-8859-15" onsubmit="formatInput">
+        <h3>Ihr Reiseziel:</h3>
+        <input class="travelbanner-search" type="text"  name="Urlaubsregion" placeholder="Bspw. Bayern, Berlin">
+        <input type="hidden" name="_dcat" value="34514" >
+        <input type="hidden" name="LH_FS" value="1" >
+        <button class="travelbanner-button">Reisen suchen</button>
+    </form>
+</div>
+
+<script>
+    function formatInput(form, event){
+        var input = $("input[name=Urlaubsregion]", form);
+	   input.attr('value', encodeURIComponent(input.val())
+    }
+</script>

@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>Brand Stats</title>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	</head>
+
+	<body>
+		<div id='div'></div>
+
+    <script>
+    	function getNumberOfBrands(){
+    		var endpoint = 'http://www.rps.stratus.ebay.com/rps/sellerbadging/tool/brands/all?siteId=3';
+    		$.ajax({
+    			crossDomain: true,
+    			type:"GET",
+    			contentType: "application/json; charset=utf-8",
+    			url:endpoint,
+    			headers: { 'Access-Control-Allow-Origin': '*' }
+    		}).done(function(data){
+    			$("#div").append(data);
+    		})
+    	}
+    	getNumberOfBrands();
+
+
+    </script>
+	</body>
+
+
+
+</html>
