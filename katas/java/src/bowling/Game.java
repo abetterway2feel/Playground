@@ -47,15 +47,4 @@ public class Game {
         }
         return score;
     }
-
-    public void print() {
-        Frame frame = firstFrame;
-        int frameNo = 1;
-        System.out.println(frameNo+":"+frame.getScore());
-        while (frame.hasNext()){
-            frame = frame.getNext();
-            frameNo++;
-            System.out.println(frameNo+":"+frame.getScore());
-        }
-    }
 }

@@ -60,8 +60,6 @@ public class AGame {
         rollMany(9, 10);
         rollMany(2, 0);
 
-        game.print();
-
         assertThat(game.score(), is(240));
     }
 
