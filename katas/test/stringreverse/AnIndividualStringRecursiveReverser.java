@@ -7,22 +7,34 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class AnIndividualStringRecursiveReverser {
 
     @Test
-    public void shouldReverseTheGivenSimpleString(){
-        String forward = "hello world";
-        String reverse = "olleh dlrow";
+    public void shouldReverseHello(){
+        String forward = "hello";
+        String reverse = "olleh";
 
-        System.out.println(forward);
-        System.out.println(reverse);
         assertThat(IndividualStringRecursiveReverser.reverse(forward), is(reverse));
     }
 
     @Test
-    public void shouldReverseTheGivenString(){
+    public void shouldReverseTheGivenSimpleString(){
+        String forward = "hello world";
+        String reverse = "olleh dlrow";
+
+        assertThat(IndividualStringRecursiveReverser.reverse(forward), is(reverse));
+    }
+
+    @Test
+    public void shouldReverseTheStringAndKeepTheSpacesAndQuotes(){
+        String forward = "hell \"o\"    world   ";
+        String reverse = "lleh \"o\"    dlrow   ";
+
+        assertThat(IndividualStringRecursiveReverser.reverse(forward), is(reverse));
+    }
+
+    @Test
+    public void shouldReverseTheGivenComplicatedString(){
         String forward = "\"--------- \"my career stack\" ---------\"";
         String reverse = "\"--------- \"ym reerac kcats\" ---------\"";
 
-        System.out.println(forward);
-        System.out.println(reverse);
         assertThat(IndividualStringRecursiveReverser.reverse(forward), is(reverse));
     }
 }
